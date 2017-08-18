@@ -29,12 +29,12 @@ run-test() {
 run-pack() {
     local name=$(run-name)
     local ver=$(run-version)
-    run-build && (cd dist && yarn pack -f "../$name-v$ver.tgz" "$@")
+    run-test && (cd dist && yarn pack -f "../$name-v$ver.tgz" "$@")
 }
 
 run-publish() {
     local ver=$(run-version)
-    run-build && (
+    run-test && (
         cd dist && \
             yarn publish \
                  --new-version "$ver" \

@@ -1,0 +1,9 @@
+{
+    "moduleFileExtensions": [
+        "ts",
+        "js"
+    ],
+    "testMatch": [
+        "<rootDir>/dist/**/*.test.js"
+    ]
+}
